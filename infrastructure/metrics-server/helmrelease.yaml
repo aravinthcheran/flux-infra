@@ -16,8 +16,8 @@ spec:
   values:
     replicas: 2
     image:
-      repository: k8s.gcr.io/metrics-server/metrics-server
-      tag: v0.6.4
+      repository: rancher/metrics-server
+      tag: v0.6.2
       pullPolicy: IfNotPresent
     args:
       - --kubelet-insecure-tls
