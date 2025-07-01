@@ -1,0 +1,28 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: metrics-server
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: https://github.com/aravinthcheran/flux-infra
+  ref:
+    branch: main
+  path: ./infrastructure/metrics-server
+
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: metrics-server
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: ./infrastructure/metrics-server
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: metrics-server
+  targetNamespace: kube-system
+  wait: true
+
