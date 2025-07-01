@@ -16,8 +16,8 @@ spec:
   values:
     replicas: 2
     image:
-      repository: rancher/metrics-server
-      tag: v0.6.2
+      repository: bitnami/metrics-server
+      tag: 0.6.4
       pullPolicy: IfNotPresent
     args:
       - --kubelet-insecure-tls
