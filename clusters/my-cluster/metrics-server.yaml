@@ -8,7 +8,6 @@ spec:
   url: https://github.com/aravinthcheran/flux-infra
   ref:
     branch: main
-  path: ./infrastructure/metrics-server
 
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
