@@ -16,9 +16,9 @@ spec:
   values:
     replicas: 2
     image:
-      repository: registry.k8s.io/metrics-server/metrics-server
+      repository: k8s.gcr.io/metrics-server/metrics-server
       tag: v0.6.4
-      pullPolicy: Never
+      pullPolicy: IfNotPresent
     args:
       - --kubelet-insecure-tls
       - --kubelet-preferred-address-types=InternalIP
